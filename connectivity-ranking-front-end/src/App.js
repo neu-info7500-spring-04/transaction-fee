@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import TransactionFeesChart from './transactionFeesChart';
+import TransactionFeesChart from './components.js/transactionFeesChart';
 
 
 function App() {
