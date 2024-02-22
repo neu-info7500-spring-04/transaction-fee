@@ -11,7 +11,7 @@ const TransactionFeesChart = () => {
   const fetchData = async () => {
     try {
       let limit = selectedDuration === '1w' ? 7 : 30;
-      const response = await axios.get(`http://localhost:3000/transaction/fees?network=${selectedNetwork}&limit=${limit}`);
+      const response = await axios.get(`http://localhost:3000/bitcoin/transaction/fees?network=${selectedNetwork}&limit=${limit}`);
       setData(response.data.data.bitcoin.transactions);
     } catch (error) {
       console.error('Error fetching transaction fees:', error);
@@ -22,8 +22,8 @@ const TransactionFeesChart = () => {
     fetchData();
   }, [selectedNetwork, selectedDuration]);
 
-  const handleNetworkChange = (network) => {
-    setSelectedNetwork(network);
+  const handleNetworkChange = (event) => {
+    setSelectedNetwork(event.target.value);
   };
 
   const handleDurationChange = (duration) => {
@@ -50,7 +50,7 @@ const TransactionFeesChart = () => {
       </div>
     <div>
     
-    <ResponsiveContainer width="50%" height={400}>
+    <ResponsiveContainer width="100%" height={400}>
     <h3>Daily Transaction fees</h3>
       <LineChart data={data} margin={{ top: 40, right: 40, bottom: 40, left: 40 }}>
       <Text value="Daily Transaction fees" offset={0} position="top" />

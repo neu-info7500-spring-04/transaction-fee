@@ -8,8 +8,8 @@ app.use(cors({
     origin: '*'
   }));
   
-// GET /transaction/fees/
-app.get('/transaction/fees/', async (req, res) => {
+// GET /bitcoin/transaction/fees/
+app.get('/bitcoin/transaction/fees/', async (req, res) => {
   const network = req.query.network.toLowerCase(); // Get the network parameter and convert it to lowercase
   const limit = req.query.limit || 7; // Get the limit query parameter or default to 7 if not provided
   try {
