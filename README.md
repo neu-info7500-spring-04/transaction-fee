@@ -1,2 +1,1 @@
-# INFO7500
-Connectivity Ranking
+# Daily Transaction Fees
