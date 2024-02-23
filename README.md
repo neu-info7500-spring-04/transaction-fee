@@ -11,12 +11,21 @@ The frontend of application is built using React.js and rechart. It provides a u
 ### Installation
 - Clone the repository 
 - Install dependencies for both frontend and backend
-  `npm install`
-- Start the backend server 
- `cd src/`
- `node app.js`
-- Start the frontend server, frontend server is running on port 3000
-  `npm start`
+  
+ ```
+npm install
+ ```
+- Start the backend server，backend is listening on port 3000
+ ``` 
+cd src/
+node app.js
+```
+ 
+- Start the frontend server, frontend server is running on port 4000
+
+```
+npm start
+```
 
 ### Screenshot
 ![b29f7a744ccefd1f03d50c4d3d949e5](https://github.com/neu-info7500-spring-04/transaction-fee/assets/113488430/9d871229-3eb5-47d7-a73e-37e4e54fda80)
